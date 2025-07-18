@@ -1,0 +1,4 @@
+input: "mod_input_atac.yml"
+output_dir: "output_atac/"
+assembly: 'GRCh38'
+#annotation: "/ix/djishnu/Alisa/Tfh/gencode.v21.annotation.gtf"
