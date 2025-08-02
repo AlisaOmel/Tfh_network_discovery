@@ -6,7 +6,7 @@ library(qgraph)
 rm(list = ls())
 library(viridis)
 library(readr)
-setwd("~/Tfh_network_discovery/src/1_PPI_network_propagation")
+# setwd("/ix/djishnu/Alisa/Tfh")
 
 PPISig <- read.csv("../../Sample_outputs/pps_protein_pairs_sig_genes_df.csv")
 ref <- read.table("../../Input_data/HomoSapiens_binary_co_complex_union.txt")
@@ -27,7 +27,7 @@ colnames(allPPI) <- colnames(PPISig)
 #merged_list <- lapply(merged_data, function(x) strsplit(x, "\t")[[1]])
 #saveRDS(merged_list, "/ix/djishnu/Alisa/Tfh/ForPaper/process_network_prop_output/merged_output.RDS")
 
-Modules <- readRDS("../../Input_data/merged_output.RDS")
+Modules <- readRDS("/ix/djishnu/Alisa/Tfh/ForPaper/process_network_prop_output/merged_output.RDS")
 #Make a module for reference subset
 Modules[[28]] <- unique(c(refS$Prot_1,refS$Prot_2))
 
