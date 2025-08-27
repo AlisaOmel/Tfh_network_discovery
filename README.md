@@ -13,7 +13,7 @@ Network based approaches for uncovering programs in Tfh differentiation
 # Dependencies
 
 Python packages:
-- pandas
+- pandas (v 1.2.4)
 - numpy
 - h5py
 - pickle
@@ -21,7 +21,7 @@ Python packages:
 - itertools
 - Seaborn
 - scipy
-- Networkx
+- Networkx (v. 2.5)
 - adjustText
 - matplotlib
 - tqdm
@@ -29,11 +29,12 @@ Python packages:
 - csv
 
 R packages:
-- Seurat
+- Seurat (v5.0.0)
 - harmony
 - Azimuth
-- SingleCellExperiment
-- escape
+- SingleCellExperiment 
+- escape (v0.99.0)
+- msigdb (v7.5.1)
 - zellkonverter
 - BiocParallel
 - rogme
