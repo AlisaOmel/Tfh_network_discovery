@@ -13,17 +13,47 @@ Network based approaches for uncovering programs in Tfh differentiation
 # Dependencies
 
 Python packages:
-Seaborn, scipy, Networkx, Pandas, itertools, adjustText, matplotlib, tqdm, ast, numpy, csv, h5py, pickle, random
+- pandas
+- numpy
+- h5py
+- pickle
+- random
+- itertools
+- Seaborn
+- scipy
+- Networkx
+- adjustText
+- matplotlib
+- tqdm
+- ast
+- csv
 
 R packages:
-Seurat, harmony, Azimuth, SingleCellExperiment, zellkonverter, BiocParallel, rogme, Cairo, ggpubr, ggplot2, qgraph, escape, viridis, readr, ComplexUpset, ggplot2, pheatmap, dplyr
+- Seurat
+- harmony
+- Azimuth
+- SingleCellExperiment
+- escape
+- zellkonverter
+- BiocParallel
+- rogme
+- Cairo
+- dplyr
+- ggpubr
+- ggplot2
+- qgraph
+- viridis
+- readr
+- ComplexUpset
+- pheatmap
 
 CLI tools:
-samtools/1.16.1 
-bwa-0.7.17 
-sra-toolkit/3.0.2 
-rgt/0.12.3 
-taiji/1.2.0 
+- samtools (v1.16.1)
+- bwa (v0.7.17)
+- sra-toolkit (v3.0.2) 
+- rgt (v0.12.3) 
+- taiji (v1.2.0)
+- hotnet2 (v1.2.1)
 
 # Citation
 
