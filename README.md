@@ -54,8 +54,6 @@ Each stage is self‑contained under `Scripts/` with minimal coupling, enabling 
 - pandas (≥ 1.2.4)
 - numpy
 - h5py
-- pickle (stdlib)
-- random, itertools, ast, csv (stdlib)
 - scipy
 - networkx (≈ 2.5)
 - matplotlib
