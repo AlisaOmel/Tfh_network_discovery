@@ -1,4 +1,4 @@
-# Tfh Network Discovery — General README
+# Tfh Network Discovery
 
 > Network-based approaches to uncover core programs underlying T follicular helper (Tfh) cell differentiation across bulk, single-cell, and spatial modalities.
 
