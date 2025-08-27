@@ -23,7 +23,7 @@ samtools/1.16.1
 bwa-0.7.17 
 sra-toolkit/3.0.2 
 rgt/0.12.3 
-taiji/1.2.0
+taiji/1.2.0 
 
 # Citation
 
