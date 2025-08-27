@@ -49,7 +49,6 @@ Each stage is self‑contained under `Scripts/` with minimal coupling, enabling 
 ---
 
 ## Dependencies
-> Versions reflect those used in the associated analyses.
 
 ### Python
 - pandas (≥ 1.2.4)
