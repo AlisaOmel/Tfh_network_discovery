@@ -1,6 +1,6 @@
 # Tfh Network Discovery
 
-> Network-based approaches to uncover core programs underlying T follicular helper (Tfh) cell differentiation across bulk, single-cell, and spatial modalities.
+Network-based approaches to uncover core programs underlying T follicular helper (Tfh) cell differentiation across bulk, single-cell, and spatial modalities.
 
 ---
 
@@ -107,7 +107,7 @@ Large binary assets are stored via Git LFS.
 - `steiner_tree.py` / `steiner_tree_extfig2.py` & `run_steiner_tree.slurm`: compute Steiner sub‑networks connecting seeds.
 - Notebooks (`get_network_prop_genes.ipynb`, `steiner_tree_extendedgenes_extfig2.ipynb`) for exploration/exports.
 - **Inputs**: PPI HDF5 (`Input_data/HomoSapiens_*.h5`), seed/score lists (e.g., `Input_data/pps_unique_genes.pkl`), `.sif` files (`extended_vinuesa_*.sif`).
-- **Example outputs**: `Sample_outputs/pps_protein_pairs_sig_genes_df.csv`; SI tables under `supplement_tables/*overlaps_df*.csv`.
+- **Example outputs**: `Sample_outputs/pps_protein_pairs_sig_genes_df.csv`; SI tables under `supplement_tables/Figure_2/*overlaps_df*.csv`.
 
 **Run examples**
 ```bash
@@ -131,7 +131,7 @@ sbatch Scripts/1_PPI_network_propagation/run_steiner_tree.slurm
 - Configs: `config_atac.yml`, `mod_input_atac.yml`, plus `config_atac.slurm`.
 - `processing_Taiji_output.ipynb` post‑processes Taiji results.
 - **Inputs**: ranked/processed CSVs in `Input_data/processed_Taiji/`.
-- **Outputs**: prioritized Taiji gene lists (e.g., `Sample_outputs/Taiji_nodot_genes.pkl`) and combined tables in `supplement_tables/`.
+- **Outputs**: prioritized Taiji gene lists (e.g., `Sample_outputs/Taiji_nodot_genes.pkl`) and combined tables in `supplement_tables/Figure_2/`.
 
 **Run example**
 ```bash
@@ -144,7 +144,7 @@ sbatch Scripts/3_Taiji_network_propagation/config_atac.slurm
 - Human/mouse processing scripts (`human_scRNA_gut_processing.R`, `mouse_scRNA_LN_analysis_4CDE.R`), spatial analyses (`human_spatial_scRNA_analysis_3H.R`).
 - `example_ssGSEA_fromGeneSets_plotting_fig3DE.R` to compute ssGSEA and generate figures.
 - **Inputs**: label RDS files under `Input_data/labels_*.rds`; curated gene sets.
-- **Outputs**: enrichment summaries (e.g., `supplement_tables/hallmark_ssGSEA_*summary*.csv`, `pid_ssGSEA_*summary*.csv`).
+- **Outputs**: enrichment summaries (e.g., `supplement_tables/Figure_3/cliffs_delta_summary_*.csv`, `supplement_tables/Figure_4/*ssGSEA*summary*.csv`).
 
 ### 5) Pathway Discovery (Bulk & scRNA)
 **Where**: `Scripts/5_pathway_discovery_bulk/` and `Scripts/5_pathway_discovery_scRNA/`
@@ -152,7 +152,7 @@ sbatch Scripts/3_Taiji_network_propagation/config_atac.slurm
 - Bulk: `example_permutations_for_bulk_msigdb_analysis.R`, `make_volcano_plot.R`, Slurm wrapper `example_run_permutations_for_volcanoplot_fig5.slurm`.
 - scRNA: `example_scGSEA_msigdb_fig5.R`, `pathway_boxplots_5CFI.R`.
 - **Inputs**: MSigDB catalogs, seed sets, and modality‑specific score tables.
-- **Outputs**: volcano tables (e.g., `supplement_tables/patternb_taiji_{HALLMARK|KEGG|PID}_1000_volc_plot_thresh_qval.csv`) and figures.
+- **Outputs**: volcano tables (e.g., `supplement_tables/Figure_5/patternb_taiji_{HALLMARK|KEGG|PID}_1000_volc_plot_thresh_qval.csv`, `supplement_tables/Figure_5/*ssGSEA*summary*.csv`, pathway enrichments under `supplement_tables/Figure_6/`).
 
 ---
 
@@ -160,11 +160,11 @@ sbatch Scripts/3_Taiji_network_propagation/config_atac.slurm
 
 | Stage | Primary Scripts | Key Inputs (examples) | Expected Outputs (examples) |
 |---|---|---|---|
-| 1. PPI propagation | `HotNet2.py`, `steiner_tree.py`, `run_steiner_tree.slurm` | `Input_data/HomoSapiens_*0.4.h5`, `Input_data/pps_unique_genes.pkl`, `.sif` and node attributes | `Sample_outputs/pps_protein_pairs_sig_genes_df.csv`, `supplement_tables/random_*overlaps_df*.csv` |
+| 1. PPI propagation | `HotNet2.py`, `steiner_tree.py`, `run_steiner_tree.slurm` | `Input_data/HomoSapiens_*0.4.h5`, `Input_data/pps_unique_genes.pkl`, `.sif` and node attributes | `Sample_outputs/pps_protein_pairs_sig_genes_df.csv`, `supplement_tables/Figure_2/random_*overlaps_df*.csv` |
 | 2. Bulk RNA | `logFCrna_calculation.ipynb`, `sort_bulk_RNA_forTaiji.ipynb` | `Input_data/Run_313.*normalized_data_matrix.tsv` | `Sample_outputs/sorted_bulk/separated_tsv/*.tsv`, logFC summaries |
-| 3. Taiji | `config_atac.yml`, `processing_Taiji_output.ipynb` | `Input_data/processed_Taiji/*.csv` | `Sample_outputs/Taiji_nodot_genes.pkl`, `supplement_tables/final_genes_all_sets_ALLGENES.csv` |
-| 4. scRNA & spatial + GSEA | `human_scRNA_gut_processing.R`, `mouse_scRNA_LN_analysis_4CDE.R`, `example_ssGSEA_fromGeneSets_plotting_fig3DE.R` | `Input_data/labels_GUT_*_combo.rds`, curated sets in `Input_data/literature_sets/` | `supplement_tables/*ssGSEA*summary*.csv`, `supplement_tables/cliffs_delta_summary_*.csv` |
-| 5. Pathway discovery | `example_permutations_for_bulk_msigdb_analysis.R`, `make_volcano_plot.R`, `example_scGSEA_msigdb_fig5.R` | MSigDB catalogs; outputs from stages 1–4 | `supplement_tables/patternb_taiji_*_volc_plot_thresh_qval.csv`, boxplots/figures |
+| 3. Taiji | `config_atac.yml`, `processing_Taiji_output.ipynb` | `Input_data/processed_Taiji/*.csv` | `Sample_outputs/Taiji_nodot_genes.pkl`, `supplement_tables/Figure_2/final_genes_all_sets_ALLGENES.csv` |
+| 4. scRNA & spatial + GSEA | `human_scRNA_gut_processing.R`, `mouse_scRNA_LN_analysis_4CDE.R`, `example_ssGSEA_fromGeneSets_plotting_fig3DE.R` | `Input_data/labels_GUT_*_combo.rds`, curated sets in `Input_data/literature_sets/` | `supplement_tables/Figure_3/cliffs_delta_summary_*.csv`, `supplement_tables/Figure_4/*ssGSEA*summary*.csv` |
+| 5. Pathway discovery | `example_permutations_for_bulk_msigdb_analysis.R`, `make_volcano_plot.R`, `example_scGSEA_msigdb_fig5.R` | MSigDB catalogs; outputs from stages 1–4 | `supplement_tables/Figure_5/patternb_taiji_*_volc_plot_thresh_qval.csv`, `supplement_tables/Figure_5/*ssGSEA*summary*.csv`, `supplement_tables/Figure_6/*` |
 
 ---
 
