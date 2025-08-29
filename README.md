@@ -52,30 +52,38 @@ Each stage is self‑contained under `Scripts/` with minimal coupling, enabling 
 
 ### Python
 - pandas (≥ 1.2.4)
-- numpy
-- h5py
-- scipy
-- networkx (≈ 2.5)
-- matplotlib
-- seaborn
-- adjustText
-- tqdm
+- numpy (≥ 1.24.3)
+- h5py (≥ 3.9.0)
+- scipy (≥ 1.11.1)
+- networkx (≥ 2.5)
+- matplotlib (≥ 3.7.2)
+- seaborn (≥ 0.12.2)
+- adjustText (≥ 1.3.0)
+- tqdm (≥ 4.65.0)
 
 ### R
-- Seurat (≈ 5.0.0), harmony, Azimuth
-- SingleCellExperiment, zellkonverter, BiocParallel
-- escape (≈ 0.99.0)
-- msigdb (≈ 7.5.1)
-- rogme, Cairo, dplyr, ggpubr, ggplot2, qgraph, viridis, readr
-- ComplexUpset, pheatmap
+- Seurat (≥ 5.3.0), harmony (≥ 1.2.3), Azimuth (≥ 0.5.0)
+- SingleCellExperiment(≥ 1.30.1), zellkonverter(≥ 1.18.0), BiocParallel (≥ 1.42.1)
+- escape (≥ 0.99.0)
+- msigdb (≥ 7.5.1)
+- rogme (≥ 0.2.1), Cairo (≥ 1.6.2), dplyr (≥ 1.1.4), ggpubr (≥ 0.6.1), ggplot2(≥ 3.5.2), qgraph (≥ 1.9.8), viridis (≥ 0.6.5), readr(≥ 2.1.5)
+- ComplexUpset(≥ 1.3.3), pheatmap (≥ 1.0.13)
 
 ### CLI Tools
-- samtools (≈ 1.16.1)
-- bwa (≈ 0.7.17)
-- SRA Toolkit (≈ 3.0.2)
-- RGT (≈ 0.12.3)
-- Taiji (≈ 1.2.0)
-- HotNet2 (≈ 1.2.1)
+- samtools (≥ 1.16.1)
+- bwa (≥ 0.7.17)
+- SRA Toolkit (≥ 3.0.2)
+- RGT (≥ 0.12.3)
+- Taiji (≥ 1.2.0)
+- HotNet2 (≥ 1.2.1)
+
+#### Operating system and hardware the software has been tested on:
+Red Hat Enterprise Linux 9.6 (Plow)  
+<br>
+Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz  
+<br>
+High-throughput computing (HTC) cluster, University of Pittsburgh
+
 
 ---
 
