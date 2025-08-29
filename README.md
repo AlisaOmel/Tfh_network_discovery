@@ -77,6 +77,11 @@ Each stage is self‑contained under `Scripts/` with minimal coupling, enabling 
 - Taiji (≥ 1.2.0)
 - HotNet2 (≥ 1.2.1)
 
+#### Operating system and hardware the software has been tested on:
+Red Hat Enterprise Linux 9.6 (Plow)
+Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz
+High-throughput computing (HTC) cluster, University of Pittsburgh.
+
 ---
 
 ## Data & Inputs
